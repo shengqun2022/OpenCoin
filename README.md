@@ -1,9 +1,13 @@
-<!--
- * @Author: shengqun.zhu shengqun2022@gmail.com
- * @Date: 2024-09-26 11:04:40
- * @LastEditors: shengqun.zhu shengqun2022@gmail.com
- * @LastEditTime: 2024-09-26 11:05:12
- * @FilePath: /OpenCoin/README.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-# OpenCoin 111
+# Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat ignition deploy ./ignition/modules/Lock.js
+```

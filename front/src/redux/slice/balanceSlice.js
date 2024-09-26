@@ -2,7 +2,7 @@
  * @Author: shengqun.zhu shengqun2022@gmail.com
  * @Date: 2024-09-20 10:53:09
  * @LastEditors: shengqun.zhu shengqun2022@gmail.com
- * @LastEditTime: 2024-09-24 20:00:14
+ * @LastEditTime: 2024-09-26 14:34:15
  * @FilePath: /myapp/front/src/redux/slice/blanceSlice.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -48,7 +48,7 @@ export const loadBalanceData = createAsyncThunk('balance/fetchBalanceData', asyn
      dispatch(setTokenWallet(tokenWallet.toString()))
 
     //  获取交易所的token
-     const tokenExchange = await exchange.balanceOf(token.target,account)
+     const tokenExchange = await exchange.tokens(token.target,account)
      dispatch(setTokenExchange(tokenExchange.toString()))
    
     //  获取钱包的ether

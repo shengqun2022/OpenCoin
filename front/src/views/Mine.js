@@ -2,7 +2,7 @@
  * @Author: shengqun.zhu shengqun2022@gmail.com
  * @Date: 2024-09-19 16:30:16
  * @LastEditors: shengqun.zhu shengqun2022@gmail.com
- * @LastEditTime: 2024-09-25 20:12:02
+ * @LastEditTime: 2024-09-26 14:47:00
  * @FilePath: /myapp/front/src/views/Mine.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -30,7 +30,7 @@ const App = () => {
       const tx =  await  window.web.exchange.depositEther({ value: amout })
       await tx.wait();
     } else {
-      const approveTx = await window.web.token.approve('0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266',amout)
+      const approveTx = await window.web.token.approve(window.web.exchange.target,amout)
       await approveTx.wait()
       const depositTx = await window.web.exchange.depositToken(window.web.token.target,amout)
       await depositTx.wait()

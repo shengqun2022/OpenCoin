@@ -5,7 +5,7 @@ import './Utils.sol';
 contract Token is Utils{
     /* 公共变量 */
     string public name = ''; //代币名称
-    string public symbol = ''; //代币符号比如'$'
+    string public symbol = ''; //代币符号
     uint8 public decimals = 0;  //代币单位
     uint256 public totalSupply = 10000; //代币总量
 

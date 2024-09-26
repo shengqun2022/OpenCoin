@@ -78,6 +78,7 @@ contract Exchange {
         orderCancel[_id] = true;
         emit Cancel(_id, msg.sender,myorder.tokenGet,myorder.amountGet,myorder.tokenGive,myorder.amountGive,block.timestamp);
     }
+    // 交易合约
 
     function fillOrder (uint _id) public {
           _Order memory myorder = orders[_id];
